@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gradiente-lineal {
+    background-image: linear-gradient(to top, #fbc2eb 40%, #a6c1ee 60%);
+}
+
+.gradiente-radial {
+    background-image: radial-gradient(#a6c0fe, #f68084 70%);
+    /* Aplicar animación */
+    animation-name: girando;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-delay: 5s;
+}
+.gradiente-radial:hover {
+    transform: scale(0.5) rotate(45deg);
+    transition: 3s;
+}
+
+.gradiente-radial img {
+    width: 200px;
+}
+
+.estilo-caja {
+    width: 200px;
+    height: 200px;
+    border: rgb(240, 57, 57) 2px solid;
+}
+
+.trasladar {
+    transform: translateX(150px);
+}
+
+.rotacion {
+    transform: rotate(45deg);
+}
+
+.transformaciones {
+    transform: scale(0.5) translate(100px, 100px) rotateY(20deg);
+}
+
+.sesgar {
+    transform: skew(45deg);
+}
+
+.escalar {
+    transform: scale(0.8);
+}
+
+.btn-prueba {
+    background-color: aqua;
+    color: black;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 10px;
+    box-shadow: 6px 7px 4px pink;
+    animation-name: agrandar;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+
+}
+
+.btn-prueba:hover {
+    background-color: aquamarine;
+    color: blue;
+    font-weight: bold;
+    transform: scale(1.5);
+    transition: 3s;
+}
+form input:focus {
+    background-color: bisque;
+
+}
+
+@keyframes girando {
+    0% {
+
+        transform: rotate(0deg);
+    }
+    100%{
+
+        transform: rotate(360deg);
+    } 
+}
+
+@keyframes agrandar {
+    0% {
+        transform: scale(2);
+    }
+    50% {
+        transform: scale(0.8) skew(-25deg);
+    }
+    100% {
+        background-color: aqua;
+        color: black;
+
+    }
+}
